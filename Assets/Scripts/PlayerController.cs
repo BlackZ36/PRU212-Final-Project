@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float moveSpeed = 5f;
     private Vector2 movement;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Nhận đầu vào từ người chơi
@@ -43,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Di chuyển nhân vật
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
