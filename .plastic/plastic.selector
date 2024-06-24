@@ -1,4 +1,0 @@
-repository "PRU212 - Dungeon Crawler@duchinh0306@cloud"
-  path "/"
-    br "/main"
-    co "/main"
